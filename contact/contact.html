@@ -10,32 +10,63 @@
     <title>Contact</title>
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">Travel</a>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container d-flex">
+          <div><a class="navbar-brand" href="#">Travel</a></div>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Gallery</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
-                  </li>
-                </ul>
-                <form class="d-flex">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-              </div>
+          <div class="collapse menu navbar-collapse" id="navbarSupportedContent">
+            <div>
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Gallery</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contact</a>
+                </li>
+              </ul>
             </div>
-          </nav>
-    </header>
+          </div>
+          <div class="search" id="">
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+<<<<<<< Updated upstream
+              <button class="button btn btn-outline-success" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+=======
+              <button class="btn btn-outline-info" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+>>>>>>> Stashed changes
+            </form>
+          </div>
+        </div>
+      </nav>
+  </header>
+    <main>
+          
+    </main>
+    <script src="../bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+      let buttons = document.querySelectorAll(".button");
+
+      for (var i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener("click", (e)=>{
+          e.preventDefault(); // preventing form submitting
+
+          let overlay = document.createElement('span'); //creating a tag(span)
+          overlay.classList.add("overlay"); //adding a class inside the span
+          e.target.appendChild(overlay); //adding overlay tag inside the anchor tag at in HTML
+
+          let xValue = e.clientX - e.target.offsetLeft; //by this we get perfect value where we will click
+          let yValue = e.clientY - e.target.offsetTop; //by this we get perfect value where we will click
+
+          overlay.style.left = xValue + "px"; //changing the position of the overlay according to our clicks on the button
+          overlay.style.top = yValue + "px"; //changing the position of the overlay according to our clicks on the button
+      });
+      }
+    </script>
 </body>
 </html>

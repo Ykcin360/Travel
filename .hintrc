@@ -1,0 +1,22 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+<<<<<<< Updated upstream
+=======
+    "axe/forms": [
+      "default",
+      {
+        "label": "off"
+      }
+    ],
+>>>>>>> Stashed changes
+    "axe/name-role-value": [
+      "default",
+      {
+        "button-name": "off"
+      }
+    ]
+  }
+}
