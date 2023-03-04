@@ -1,4 +1,6 @@
-header{
-    color: brown !important;
-    background-color: blue !important;
+.menu {
+    justify-content: center;
+}
+.search{
+    justify-content: end;
 }
