@@ -1,0 +1,13 @@
+.menu {
+    justify-content: center;
+}
+.search{
+    justify-content: end;
+}
+.search button{
+    border-radius: 2rem;
+    border: none;
+} 
+.search input{
+    border-radius: 2rem;
+} 
